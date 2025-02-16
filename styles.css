@@ -1,0 +1,274 @@
+/* Importazione dei font locali */
+@font-face {
+    font-family: 'Sentient';
+    src: url('fonts/Sentient-Bold.woff2') format('woff2'),
+         url('fonts/Sentient-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/Satoshi-Regular.woff2') format('woff2'),
+         url('fonts/Satoshi-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Satoshi', sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #1F51FF;
+}
+
+/* Navigazione */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 150px 10%;
+    background-color: #E6F0FF;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.hero h1 span {
+    font-family: 'Sentient', sans-serif;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #1F51FF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* Work Section */
+.works {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.works h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.work-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.work-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.work-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.work-item h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #1F51FF;
+    font-weight: 700;
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 1.3em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 100px 5%;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .works {
+        padding: 60px 5%;
+    }
+
+    .work-gallery {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .work-item {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 5%;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+
+    .works h2 {
+        font-size: 2em;
+    }
+
+    .work-item {
+        width: 90%;
+    }
+}
+/* Sezione About */
+.about {
+    padding: 100px 10%;
+    text-align: center;
+    background-color: #E6F0FF;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text h1 {
+    font-size: 2.8em;
+    font-family: 'Sentient', sans-serif;
+    font-weight: 700;
+    color: #1F51FF;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    font-family: 'Satoshi', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-image img {
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 220px;
+    }
+}
