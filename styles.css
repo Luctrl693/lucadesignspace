@@ -1,4 +1,4 @@
-/* Importazione dei font locali */
+/* Importazione dei font */
 @font-face {
     font-family: 'Sentient';
     src: url('fonts/Sentient-Bold.woff2') format('woff2'),
@@ -44,7 +44,7 @@ header {
     color: #1F51FF;
 }
 
-/* Navigazione */
+/* Navigazione classica */
 nav ul {
     list-style: none;
     display: flex;
@@ -105,30 +105,34 @@ nav a {
     margin-bottom: 40px;
 }
 
-.work-gallery {
+/* Slider immagini */
+.image-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.image-track {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    gap: 10px;
+    animation: scroll 10s linear infinite;
 }
 
-.work-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
+.image-track img {
+    width: auto;
+    height: 200px;
+    flex-shrink: 0;
 }
 
-.work-item img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-.work-item h3 {
-    margin-top: 15px;
-    font-size: 1.2em;
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 /* Footer */
@@ -150,8 +154,8 @@ footer {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
+        align-items: center;
+        text-align: center;
     }
 
     .logo {
@@ -179,13 +183,12 @@ footer {
         padding: 60px 5%;
     }
 
-    .work-gallery {
-        flex-direction: column;
-        gap: 30px;
+    .image-slider {
+        height: 150px;
     }
 
-    .work-item {
-        width: 80%;
+    .image-track img {
+        height: 150px;
     }
 }
 
@@ -208,239 +211,5 @@ footer {
 
     .works h2 {
         font-size: 2em;
-    }
-
-    .work-item {
-        width: 90%;
-    }
-}
-
-/* Slider immagini */
-.image-slider {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    width: 100%;
-    height: 200px; /* Modifica l'altezza se necessario */
-}
-
-.image-track {
-    display: flex;
-    gap: 10px;
-    animation: scroll 10s linear infinite;
-}
-
-.image-track img {
-    width: auto;
-    height: 200px; /* Adatta le immagini all'altezza */
-    flex-shrink: 0;
-}
-
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-/* Menu responsive */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .nav-links li {
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
-/* Sezione About */
-.about {
-    max-width: 800px;
-    margin: 80px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Stile del contenitore */
-.about-container {
-    text-align: left;
-}
-
-/* Titoli */
-.about-container h1, 
-.about-container h2 {
-    font-family: 'Sentient', sans-serif;
-    font-weight: 700;
-    color: #1F51FF;
-    margin-bottom: 15px;
-}
-
-/* Stile specifico per h1 */
-.about-container h1 {
-    font-size: 2.8em;
-}
-
-/* Stile specifico per h2 */
-.about-container h2 {
-    font-size: 2em;
-    color: #333;
-    margin-top: 25px;
-}
-
-/* Paragrafi */
-.about-container p {
-    font-family: 'Satoshi', sans-serif;
-    font-size: 1.2em;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Lista competenze */
-.about-container ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Elementi lista */
-.about-container ul li {
-    font-family: 'Satoshi', sans-serif;
-    font-size: 1.2em;
-    color: #444;
-    padding: 5px 0;
-}
-
-/* Media Queries per dispositivi mobili */
-@media (max-width: 768px) {
-    .about {
-        padding: 50px 5%;
-    }
-
-    .about-container {
-        text-align: center;
-    }
-
-    .about-container h1 {
-        font-size: 2.4em;
-    }
-
-    .about-container h2 {
-        font-size: 1.8em;
-    }
-
-    .about-container p {
-        font-size: 1.1em;
-    }
-
-    .about-container ul li {
-        font-size: 1.1em;
-    }
-}
-/* Stile per il menu a tendina */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Mostra l'icona del menu */
-    }
-
-    nav {
-        display: none; /* Nasconde il menu di default */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: white;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links.active {
-        display: flex; /* Mostra il menu quando è attivo */
-        flex-direction: column;
-    }
-
-    .nav-links li {
-        padding: 10px 0;
-    }
-}
-/* Menu responsive */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Mostra l'icona ☰ */
-    }
-
-    nav {
-        display: none; /* Nasconde il menu di default */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: white;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links {
-        display: none; /* Nasconde i link */
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links.active {
-        display: flex; /* Mostra il menu quando è attivo */
-    }
-
-    .nav-links li {
-        padding: 10px 0;
     }
 }
