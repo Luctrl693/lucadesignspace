@@ -366,3 +366,42 @@ footer {
         font-size: 1.1em;
     }
 }
+/* Stile per il menu a tendina */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra l'icona del menu */
+    }
+
+    nav {
+        display: none; /* Nasconde il menu di default */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostra il menu quando è attivo */
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+}
