@@ -10,16 +10,22 @@
 </head>
 <body>
 
-    <header>
-        <div class="logo">Luca’s Design Space</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <a href="about.html">About</a>
-                <li><a href="#">My Works</a></li>
-            </ul>
-        </nav>
-    </header>
+ <header>
+    <div class="logo">Luca’s Design Space</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">My Works</a></li>
+        </ul>
+    </nav>
+	<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+	</script>
+</header>
 
     <section class="hero">
         <h1><span>Design di slide</span> <br>che comunicano.</h1>
