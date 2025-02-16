@@ -315,3 +315,20 @@ footer {
         font-size: 1.1em;
     }
 }
+/* Stili per i link social nel footer */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #1F51FF;
+    font-weight: 700;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff4081; /* Colore rosa di Dribbble */
+}
